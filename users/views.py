@@ -1,12 +1,28 @@
 from rest_framework import generics, permissions, views, status
 from django.contrib.auth.models import User
 from .serializers import RegisterSerializer
-from rest_framework.authtoken.models import Token
-from rest_framework.response import Response
 from rest_framework import viewsets
-from django.contrib.auth.models import User
 from rest_framework.permissions import IsAuthenticated  # Para proteger las rutas
 from .serializers import UserSerializer
+from rest_framework.authtoken.views import ObtainAuthToken
+from rest_framework.authtoken.models import Token
+from rest_framework.response import Response
+from rest_framework import status
+
+
+class CustomAuthToken(ObtainAuthToken):
+
+    def post(self, request, *args, **kwargs):
+        serializer = self.serializer_class(data=request.data, context={'request': request})
+        serializer.is_valid(raise_exception=True)
+        user = serializer.validated_data['user']
+        token, created = Token.objects.get_or_create(user=user)
+
+        # Devolver tanto el token como el ID del usuario
+        return Response({
+            'token': token.key,
+            'user_id': user.id  # Agregar el ID del usuario a la respuesta
+        }, status=status.HTTP_200_OK)
 
 
 class UserViewSet(viewsets.ModelViewSet):
