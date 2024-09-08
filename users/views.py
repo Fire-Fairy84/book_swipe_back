@@ -18,7 +18,6 @@ class CustomAuthToken(ObtainAuthToken):
         user = serializer.validated_data['user']
         token, created = Token.objects.get_or_create(user=user)
 
-        # Devolver tanto el token como el ID del usuario
         return Response({
             'token': token.key,
             'user_id': user.id  # Agregar el ID del usuario a la respuesta
