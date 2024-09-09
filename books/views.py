@@ -11,6 +11,10 @@ class BookViewSet(viewsets.ModelViewSet):
     serializer_class = BookSerializer
     permission_classes = [IsAuthenticated]
 
+    def perform_create(self, serializer):
+        # Asociar el libro con el usuario autenticado
+        serializer.save(user=self.request.user)
+
 
 class MyBooksView(APIView):
     permission_classes = [IsAuthenticated]
