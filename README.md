@@ -13,12 +13,12 @@
 - [Tecnologías](#tecnologías-)
 - [Uso](#uso-)
 - [Contribución 🤝](#contribución-)
-- [Desarrolladoras 👩‍💻](#desarrolladoras-)
+- [Autoría 👩‍💻](#desarrolladorx-)
 - [Demo](#demo-)
 
 ## Proyecto 
 
-**BookSwipe** es una aplicación de intercambio de libros inspirada en Tinder. Los usuarios pueden deslizar libros hacia la izquierda o derecha para indicar si están interesados o no. Si dos usuarios coinciden en sus gustos (es decir, ambos han dado like a los libros del otro), pueden iniciar un chat para coordinar el intercambio de libros.
+**BookSwipe** es una aplicación de intercambio de libros inspirada en la funcionalidad del match de otras apps como Tinder. Los usuarios pueden deslizar libros hacia la izquierda o derecha para indicar si están interesados o no. Si dos usuarios coinciden en sus gustos (es decir, ambos han dado like a los libros del otro), pueden iniciar un chat para coordinar el intercambio de libros.
 
 El frontend está desarrollado en React utilizando styled-components, mientras que el backend está construido en Django con Django REST Framework y una base de datos PostgreSQL.
 
@@ -55,7 +55,7 @@ _(Agregar el enlace al diagrama de datos o una captura de la estructura de la ba
 1. Clona el repositorio del backend:
 
     ```bash
-    git clone https://github.com/tu-usuario/bookswipe-back
+    git clone https://github.com/tu-usuario/book_swipe-back
     ```
 
 2. Crea y activa un entorno virtual:
@@ -86,9 +86,11 @@ _(Agregar el enlace al diagrama de datos o una captura de la estructura de la ba
 
 El proyecto sigue una estructura común para aplicaciones Django y React, con una API organizada en diferentes módulos para una gestión eficiente.
 
+### Estructura de carpetas en Backend
+
 ```plaintext
 /
-├── bookswipe-backend
+├── book_swipe
 │   ├── books/
 │   │   ├── migrations/
 │   │   ├── models.py
@@ -103,6 +105,10 @@ El proyecto sigue una estructura común para aplicaciones Django y React, con un
 │   ├── manage.py
 │   ├── requirements.txt
 │   └── README.md
+```
+### Estructura de carpetas en Frontend
+
+```plaintext
 ├── bookswipe-frontend
 │   ├── components/
 │   │   ├── Button/
@@ -114,20 +120,23 @@ El proyecto sigue una estructura común para aplicaciones Django y React, con un
 │   │   └── ...
 │   ├── App.js
 │   └── ...
-
+```
 ## Tecnologías
 
 **Backend**
-- [Python](https://www.python.org/)
-- [Django](https://www.djangoproject.com/)
-- [Django REST Framework](https://www.django-rest-framework.org/)
-- [PostgreSQL](https://www.postgresql.org/)
-- [Pillow](https://python-pillow.org/) para manejo de imágenes.
+- [Python 3.12](https://www.python.org/)
+- [Django 5.1.1](https://www.djangoproject.com/)
+- [Django REST Framework 3.15.2](https://www.django-rest-framework.org/)
+- [PostgreSQL 15](https://www.postgresql.org/)
+- [Pillow 10.0.1](https://python-pillow.org/) para manejo de imágenes
+- [Pytest 7.4.2](https://docs.pytest.org/en/stable/)
 
 **Frontend** *(https://github.com/Fire-Fairy84/book_swipe_front)*
-- [React.js](https://reactjs.org/)
-- [Styled-components](https://styled-components.com/)
-- [Axios](https://axios-http.com/es/docs/intro)
+- [React.js 9.7.4](https://reactjs.org/)
+- [Styled-components 6.1.13](https://styled-components.com/)
+- [Axios 1.7.7](https://axios-http.com/es/docs/intro)
+- [Vitest 0.34.4](https://vitest.dev/)
+- [React Tinder Card 1.6.4](https://www.npmjs.com/package/react-tinder-card)
 
 ## Uso
 
@@ -157,7 +166,7 @@ python manage.py runserver
 
 ## Este proyecto ha sido creado por:
 
-- **Esther Sarasua**(https://github.com/Fire-Fairy84)
+- **Esther P. Sarasua**(https://github.com/Fire-Fairy84)
 
 
 ## Demo
