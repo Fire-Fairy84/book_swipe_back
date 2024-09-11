@@ -3,7 +3,6 @@
 ## Índice
 
 - [Proyecto 📚](#proyecto-)
-    - [Requisitos previos](#requisitos-previos-)
 - [Instalación 🛠️](#instalación-)
     - [Requerimientos](#requerimientos-)
 - [Estructura del proyecto](#estructura-del-proyecto-)
@@ -19,7 +18,6 @@
 
 El frontend está desarrollado en React utilizando styled-components, mientras que el backend está construido en Django con Django REST Framework y una base de datos PostgreSQL.
 
-### Requisitos previos
 
 **Funcionalidades**
 - Registro y autenticación de usuarios.
