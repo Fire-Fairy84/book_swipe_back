@@ -4,9 +4,6 @@
 
 - [Proyecto 📚](#proyecto-)
     - [Requisitos previos](#requisitos-previos-)
-- [Diagramas](#diagramas-)
-    - [Diagrama de flujo](#diagrama-de-flujo-)
-    - [Diagrama de datos](#diagrama-de-datos-)
 - [Instalación 🛠️](#instalación-)
     - [Requerimientos](#requerimientos-)
 - [Estructura del proyecto](#estructura-del-proyecto-)
@@ -33,15 +30,6 @@ El frontend está desarrollado en React utilizando styled-components, mientras q
 - Visualización de libros en formato de tarjeta.
 - Filtros para evitar que los usuarios vean sus propios libros en el swipe.
 
-## Diagramas
-
-### Diagrama de flujo
-
-_(Agregar el enlace al diagrama de flujo si es necesario)_
-
-### Diagrama de datos
-
-_(Agregar el enlace al diagrama de datos o una captura de la estructura de la base de datos si es necesario)_
 
 ## Instalación 🛠️
 
