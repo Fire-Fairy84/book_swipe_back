@@ -2,7 +2,7 @@ from rest_framework import generics, permissions, views, status
 from django.contrib.auth.models import User
 from .serializers import RegisterSerializer
 from rest_framework import viewsets
-from rest_framework.permissions import IsAuthenticated  # Para proteger las rutas
+from rest_framework.permissions import IsAuthenticated
 from .serializers import UserSerializer
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token
@@ -20,7 +20,7 @@ class CustomAuthToken(ObtainAuthToken):
 
         return Response({
             'token': token.key,
-            'user_id': user.id  # Agregar el ID del usuario a la respuesta
+            'user_id': user.id
         }, status=status.HTTP_200_OK)
 
 
