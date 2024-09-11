@@ -1,0 +1,44 @@
+@startuml
+
+!define Table(x) class x << (T,#FFAAAA) >>
+hide methods
+hide stereotypes
+
+Table(User) {
+  +id: Integer
+  +username: String
+  +email: String
+  +password: String
+}
+
+Table(Book) {
+  +id: Integer
+  +title: String
+  +author: String
+  +description: Text
+  +cover_image: Image
+  +user_id: Integer
+}
+
+Table(SwipeAction) {
+  +id: Integer
+  +user_id: Integer
+  +book_id: Integer
+  +liked: Boolean
+  +created_at: DateTime
+}
+
+Table(Match) {
+  +id: Integer
+  +user1_id: Integer
+  +user2_id: Integer
+  +created_at: DateTime
+}
+
+User "1" -- "0..*" Book : owns
+User "1" -- "0..*" SwipeAction : performs
+Book "1" -- "0..*" SwipeAction : received
+User "1" -- "0..*" Match : initiates
+User "1" -- "0..*" Match : matches
+
+@enduml
