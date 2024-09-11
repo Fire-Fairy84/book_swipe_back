@@ -8,7 +8,7 @@ class Book(models.Model):
     description = models.TextField()
     cover_image = models.ImageField(upload_to='covers/', blank=True, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE,
-                             related_name='books')  # Relación con el usuario que sube el libro
+                             related_name='books')
 
     def __str__(self):
         return self.title
